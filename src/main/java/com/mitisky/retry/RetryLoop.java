@@ -59,8 +59,8 @@ public class RetryLoop {
         boolean throwException = false;
         if (exception instanceof KeeperException.ConnectionLossException) {
             System.out.println("Á¬½Ó¶ªÊ§");
-//            wrapper.getZookeeperHandler().reconnect();
         }
+
         if (retryPolicy.allowRetry(retryCount++, System.currentTimeMillis() - startTime, sleeper)) {
             throwException = false;
         } else {

@@ -16,7 +16,7 @@ public class ZooKeeperHandler {
     private Watcher watcher;
 
     public ZooKeeper getZooKeeper() {
-        if (zkHandler.getState() == ZooKeeper.States.CLOSED) {
+        if (zkHandler.getState() == ZooKeeper.States.CLOSED || zkHandler.getState() != ZooKeeper.States.NOT_CONNECTED) {
             System.out.println("当前Zookeeper客户端状态为：" + zkHandler.getState() + "，正在重新连接");
             reconnect();
         }
