@@ -5,3 +5,4 @@ To use this project better, I read it's code.After reading the code of Curator,i
 # introduce
 What's your needs?If you need a sample client can deal with  exception thrown by Zookeeper client and usage is same to the offical client.
 The Wrapper has same interface as ZooKeeper,just add a retry loop and exception dispose.Use the Wrapper to replace the official Zookeeper client and two client's usage are same,even you can through the factory of Zookeeper client in your project generate a wrapper and replace the official client directly which is work and support greatly.
+#Detial
